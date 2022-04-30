@@ -7,7 +7,7 @@ $.ajaxPrefilter(function(options){
   }
   // 全局统一挂载complete回调函数
   options.complete = function (res){
-    if(res.responseJSON.status ===1 && res.responseJSON.message ==='身份认证失败！'){
+    if(res.responseJSON.status === 1 && res.responseJSON.message ==='身份认证失败！'){
       //         // 清空token值 
             localStorage.removeItem('token')
       //         // 强制跳转到登录页面
